@@ -1,4 +1,4 @@
-:- [path].
+:- [data].
 
 find_shortest_path(Origin, Destination):-
 	charger(C1,Origin),
@@ -37,29 +37,35 @@ a_star(Paths, Destination, BestPath):-
 
 decide_best([X],X):-!.
 decide_best([[C1,Ci1|Y],[C2,Ci2|_]|Z], Best):-
-	h(Ci1, Ci1, H1),
-	h(Ci2, Ci2, H2),
+	nth1(1, Y, C),
+	h(C, Ci1, H1),
+	h(C, Ci2, H2),
 	H1 +  C1 =< H2 +  C2,
 	decide_best([[C1,Ci1|Y]|Z], Best).
 decide_best([[C1,Ci1|_],[C2,Ci2|Y]|Z], Best):-
-	h(Ci1, Ci1, H1),
-	h(Ci2, Ci2, H2),
+	nth1(1, Y, C),
+	h(C, Ci1, H1),
+	h(C, Ci2, H2),
 	H1  + C1 > H2 +  C2,
 	decide_best([[C2,Ci2|Y]|Z], Best).
 
 
 expand_border([Cost,City|Path],Paths):-
 	findall([Cost,NewCity,City|Path],
-		(path(City, NewCity,_),
+		(road(City, NewCity,_),
 		not(member(NewCity,Path))),
 		L),
 	change_costs(L, Paths).
 
 change_costs([],[]):-!.
 change_costs([[Total_Cost,Ci1,Ci2|Path]|Y],[[NewCost_Total,Ci1,Ci2|Path]|Z]):-
-	path(Ci2, Ci1, Distance),
-	NewCost_Total is Total_Cost + Distance,
-	NewCost_Total =< 240,
+	road(Ci2, Ci1, Distance),
+	charge(Ci2, Charge),
+	XXX is Charge / 80 - Distance,
+	write(XXX),
+	XXX is Charge / 80 - Distacne,
+	NewCost_Total is Total_Cost + Distance + Charge,
+	NewCost_Total =< 1000,
 	change_costs(Y,Z).
 change_costs([[Total_Cost,_,_|_]|Y],Z):-
 	change_costs(Y,Z).
