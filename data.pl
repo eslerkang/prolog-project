@@ -35,22 +35,6 @@ road(7, 10, 200).
 road(8, 9, 50).
 road(9, 10, 50).
 
-highway(1, 2, 'a').
-highway(1, 3, 'b').
-highway(1, 4, 'c').
-highway(2, 3, 'd').
-highway(2, 5, 'e').
-highway(3, 4, 'f').
-highway(3, 6, 'g').
-highway(4, 5, 'h').
-highway(4, 7, 'i').
-highway(5, 8, 'j').
-highway(6, 9, 'k').
-highway(7, 8, 'l').
-highway(7, 10, 'm').
-highway(8, 9, 'n').
-highway(9, 10, 'o').
-
 h(X, X, 0).
 
 h(1, 2, 100).

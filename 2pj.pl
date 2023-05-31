@@ -21,7 +21,7 @@ print_stack(S):-stack(E, Rest, S), write(E), write(' '), print_stack(Rest). /*, 
 
 empty_set([]).
 /* member_set(E, S) :- member(E, S). */
-member_set([State, Parent, _, _, _, _], [[State, Parent, _, _, _, _]|_]).
+member_set([State, Parent, L, G, _, _], [[State, Parent, L, G, _, _]|_]).
 member_set(X, [_|T]) :- member_set(X, T).
 
 delete_if_in_set(_, [], []).
@@ -83,16 +83,16 @@ path(Open_pq, _, _) :-
 	write('Path searched, no solution found.').
 
 path(Open_pq, Closed_set, Goal) :-
-	dequeue_pq([State, Parent, _, _, _, F], Open_pq, _),
+	dequeue_pq([State, Parent, L, G, _, _], Open_pq, _),
 	State = Goal,
-	write(F), nl,
-	write('The solution path is: '), nl,
-	printsolution([State, Parent, _, _, _, _], Closed_set).
+	write('-------------------------------------------'), nl, nl,
+	write('We recommend you to go,'), nl, nl,
+	printsolution([State, Parent, L, G, _, _], Closed_set).
 
 path(Open_pq, Closed_set, Goal) :-
 	dequeue_pq([State, Parent, L, G, H, F], Open_pq, Rest_open_pq),
 	write('Selected for Visit: '),
-	print(State), nl,
+	write(State), nl,
   get_children([State, Parent, L, G, H, F],
 	Rest_open_pq, Closed_set, Children, Goal),
 	insert_list_pq(Children, Rest_open_pq, New_open_pq),
@@ -122,14 +122,20 @@ heuristic(State, Goal, HT) :-
 	h(State, Goal, H); h(Goal, State, H)),
 	HT is H/80.
 
-printsolution([State, nil, _, _, _, _], _) :- write(State), nl.
-printsolution([State, Parent, _, _, _, _], Closed_set) :-
-	member_set([Parent, Grandparent, _, _, _, _], Closed_set),
-	printsolution([Parent, Grandparent, _, _, _, _], Closed_set),
-	write(State), nl.
+printsolution([State, nil, L, _, _, _], _) :-
+	write('<< Start at '), write(State), write(' >>'), nl,
+	write('with remaining driving range: '), print(L), write('km'), nl, nl.
+printsolution([State, Parent, L, G, _, _], Closed_set) :-
+	member_set([Parent, Grandparent, PL, PG, _, _], Closed_set),
+	printsolution([Parent, Grandparent, PL, PG, _, _], Closed_set),
+	write('<< Go to '), write(State), write(' >>'), nl,
+	write('with remaining driving range: '), write(L), write('km'), nl,
+	convert_time(G, Hour, Min),
+	write('time passed: '), write(Hour), write('h '), write(Min), write('min'), nl, nl.
 
 move(State, Next, NP, L, NL) :-
 	road(State, Next, P),
+	L \= 240,
 	Charge is 240 - L,
 	charge(State, C),
 	NP is P + Charge / C * 80,
@@ -138,6 +144,7 @@ move(State, Next, NP, L, NL) :-
 
 move(State, Next, NP, L, NL) :-
 	road(Next, State, P),
+	L \= 240,
 	Charge is 240 - L,
 	charge(State, C),
 	NP is P + Charge / C * 80,
@@ -153,3 +160,7 @@ move(State, Next, P, L, NL) :-
 	road(State, Next, P),
 	NL is L - P,
 	NL >= 0.
+
+convert_time(HDecimal, Hours, Minutes) :-
+  Hours is floor(HDecimal),
+  Minutes is round((HDecimal - Hours) * 60).
