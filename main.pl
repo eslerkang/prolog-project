@@ -91,8 +91,9 @@ path(Open_pq, Closed_set, Goal) :-
 
 path(Open_pq, Closed_set, Goal) :-
 	dequeue_pq([State, Parent, L, G, H, F], Open_pq, Rest_open_pq),
-	write('Selected for Visit: '),
-	write(State), nl,
+	write('Selected to go: '),
+	charger(State, Name),
+	write(State), write('('), write(Name), write(')'), nl,
   get_children([State, Parent, L, G, H, F],
 	Rest_open_pq, Closed_set, Children, Goal),
 	insert_list_pq(Children, Rest_open_pq, New_open_pq),
@@ -123,12 +124,14 @@ heuristic(State, Goal, HT) :-
 	HT is H/80.
 
 printsolution([State, nil, L, _, _, _], _) :-
-	write('<< Start at '), write(State), write(' >>'), nl,
+	charger(State, Name),
+	write('<< Start at '), write(Name), write(' >>'), nl,
 	write('with remaining driving range: '), print(L), write('km'), nl, nl.
 printsolution([State, Parent, L, G, _, _], Closed_set) :-
 	member_set([Parent, Grandparent, PL, PG, _, _], Closed_set),
 	printsolution([Parent, Grandparent, PL, PG, _, _], Closed_set),
-	write('<< Go to '), write(State), write(' >>'), nl,
+	charger(State, Name),
+	write('<< Go to '), write(Name), write(' >>'), nl,
 	write('with remaining driving range: '), write(L), write('km'), nl,
 	convert_time(G, Hour, Min),
 	write('time passed: '), write(Hour), write('h '), write(Min), write('min'), nl, nl.
