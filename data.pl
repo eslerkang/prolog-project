@@ -112,6 +112,7 @@ road(31, 33, 325).
 
 h(X, X, 0).
 
+% Straight line distance (1, Y)
 h(1, 2, 189).
 h(1, 3, 503).
 h(1, 4, 774).
@@ -145,6 +146,7 @@ h(1, 31, 2741).
 h(1, 32, 2993).
 h(1, 33, 2865).
 
+% Straight line distance (2, Y)
 h(2, 3, 328).
 h(2, 4, 602).
 h(2, 5, 827).
@@ -177,6 +179,7 @@ h(2, 31, 2650).
 h(2, 32, 2882).
 h(2, 33, 2760).
 
+% Straight line distance (3, Y)
 h(3, 4, 274).
 h(3, 5, 507).
 h(3, 6, 389).
@@ -208,7 +211,7 @@ h(3, 31, 2389).
 h(3, 32, 2596).
 h(3, 33, 2481).
 
-% h facts for pairs (4, Y)
+% Straight line distance (4, Y)
 h(4, 5, 257).
 h(4, 6, 211).
 h(4, 7, 487).
@@ -239,7 +242,7 @@ h(4, 31, 2183).
 h(4, 32, 2364).
 h(4, 33, 2257).
 
-% h facts for pairs (5, Y)
+% Straight line distance (5, Y)
 h(5, 6, 380).
 h(5, 7, 442).
 h(5, 8, 338).
@@ -269,7 +272,7 @@ h(5, 31, 2142).
 h(5, 32, 2280).
 h(5, 33, 2186).
 
-% h facts for pairs (6, Y)
+% Straight line distance (6, Y)
 h(6, 7, 168).
 h(6, 8, 555).
 h(6, 9, 432).
@@ -298,7 +301,7 @@ h(6, 31, 2004).
 h(6, 32, 2207).
 h(6, 33, 2093).
 
-% h facts for pairs (7, Y)
+% Straight line distance (7, Y)
 h(7, 8, 503).
 h(7, 9, 378).
 h(7, 10, 432).
@@ -326,7 +329,7 @@ h(7, 31, 1837).
 h(7, 32, 2040).
 h(7, 33, 1924).
 
-% h facts for pairs (8, Y)
+% Straight line distance (8, Y)
 h(8, 9, 126).
 h(8, 10, 276).
 h(8, 11, 270).
@@ -353,7 +356,7 @@ h(8, 31, 1883).
 h(8, 32, 1982).
 h(8, 33, 1900).
 
-% h facts for pairs (9, Y)
+% Straight line distance (9, Y)
 h(9, 10, 251).
 h(9, 11, 345).
 h(9, 12, 469).
@@ -379,7 +382,7 @@ h(9, 31, 1872).
 h(9, 32, 1999).
 h(9, 33, 1907).
 
-% h facts for pairs (10, Y)
+% Straight line distance (10, Y)
 h(10, 11, 236).
 h(10, 12, 340).
 h(10, 13, 393).
@@ -404,7 +407,7 @@ h(10, 31, 1623).
 h(10, 32, 1750).
 h(10, 33, 1657).
 
-% h facts for pairs (11, Y)
+% Straight line distance (11, Y)
 h(11, 12, 125).
 h(11, 13, 584).
 h(11, 14, 540).
@@ -428,7 +431,7 @@ h(11, 31, 1663).
 h(11, 32, 1733).
 h(11, 33, 1660).
 
-% h facts for pairs (12, Y)
+% Straight line distance (12, Y)
 h(12, 13, 584).
 h(12, 14, 540).
 h(12, 15, 918).
@@ -451,7 +454,7 @@ h(12, 31, 1663).
 h(12, 32, 1733).
 h(12, 33, 1660).
 
-% h facts for pairs (13, Y)
+% Straight line distance (13, Y)
 h(13, 14, 131).
 h(13, 15, 342).
 h(13, 16, 302).
@@ -473,7 +476,7 @@ h(13, 31, 1343).
 h(13, 32, 1547).
 h(13, 33, 1429).
 
-% h facts for pairs (14, Y)
+% Straight line distance (14, Y)
 h(14, 15, 387).
 h(14, 16, 221).
 h(14, 17, 177).
@@ -494,7 +497,7 @@ h(14, 31, 1262).
 h(14, 32, 1441).
 h(14, 33, 1330).
 
-% h facts for pairs (15, Y)
+% Straight line distance (15, Y)
 h(15, 16, 318).
 h(15, 17, 320).
 h(15, 18, 638).
@@ -514,7 +517,7 @@ h(15, 31, 1156).
 h(15, 32, 1437).
 h(15, 33, 1296).
 
-% h facts for pairs (16, Y)
+% Straight line distance (16, Y)
 h(16, 17, 44).
 h(16, 18, 325).
 h(16, 19, 132).
@@ -533,7 +536,7 @@ h(16, 31, 1046).
 h(16, 32, 1248).
 h(16, 33, 1127).
 
-% h facts for pairs (17, Y)
+% Straight line distance (17, Y)
 h(17, 18, 319).
 h(17, 19, 176).
 h(17, 20, 653).
@@ -551,7 +554,7 @@ h(17, 31, 1089).
 h(17, 32, 1286).
 h(17, 33, 1167).
 
-% h facts for pairs (18, Y)
+% Straight line distance (18, Y)
 h(18, 19, 364).
 h(18, 20, 423).
 h(18, 21, 411).
@@ -568,7 +571,7 @@ h(18, 31, 1098).
 h(18, 32, 1188).
 h(18, 33, 1102).
 
-% h facts for pairs (19, Y)
+% Straight line distance (19, Y)
 h(19, 20, 577).
 h(19, 21, 713).
 h(19, 22, 849).
@@ -584,7 +587,7 @@ h(19, 31, 914).
 h(19, 32, 1129).
 h(19, 33, 1003).
 
-% h facts for pairs (20, Y)
+% Straight line distance (20, Y)
 h(20, 21, 281).
 h(20, 22, 297).
 h(20, 23, 523).
@@ -599,7 +602,7 @@ h(20, 31, 839).
 h(20, 32, 812).
 h(20, 33, 761).
 
-% h facts for pairs (21, Y)
+% Straight line distance (21, Y)
 h(21, 22, 217).
 h(21, 23, 251).
 h(21, 24, 291).
@@ -613,7 +616,7 @@ h(21, 31, 1119).
 h(21, 32, 1056).
 h(21, 33, 1025).
 
-% h facts for pairs (22, Y)
+% Straight line distance (22, Y)
 h(22, 23, 325).
 h(22, 24, 328).
 h(22, 25, 427).
@@ -626,7 +629,7 @@ h(22, 31, 1056).
 h(22, 32, 918).
 h(22, 33, 917).
 
-% h facts for pairs (23, Y)
+% Straight line distance (23, Y)
 h(23, 24, 57).
 h(23, 25, 218).
 h(23, 26, 558).
@@ -638,7 +641,7 @@ h(23, 31, 1351).
 h(23, 32, 1242).
 h(23, 33, 1233).
 
-% h facts for pairs (24, Y)
+% Straight line distance (24, Y)
 h(24, 25, 163).
 h(24, 26, 534).
 h(24, 27, 122).
@@ -649,7 +652,7 @@ h(24, 31, 1371).
 h(24, 32, 1245).
 h(24, 33, 1244).
 
-% h facts for pairs (25, Y)
+% Straight line distance (25, Y)
 h(25, 26, 546).
 h(25, 27, 262).
 h(25, 28, 994).
@@ -659,7 +662,7 @@ h(25, 31, 1483).
 h(25, 32, 1317).
 h(25, 33, 1334).
 
-% h facts for pairs (26, Y)
+% Straight line distance (26, Y)
 h(26, 27, 461).
 h(26, 28, 644).
 h(26, 29, 672).
@@ -668,7 +671,7 @@ h(26, 31, 1062).
 h(26, 32, 808).
 h(26, 33, 861).
 
-% h facts for pairs (27, Y)
+% Straight line distance (27, Y)
 h(27, 28, 734).
 h(27, 29, 771).
 h(27, 30, 996).
@@ -676,27 +679,27 @@ h(27, 31, 1250).
 h(27, 32, 1131).
 h(27, 33, 1126).
 
-% h facts for pairs (28, Y)
+% Straight line distance (28, Y)
 h(28, 29, 30).
 h(28, 30, 243).
 h(28, 31, 498).
 h(28, 32, 513).
 h(28, 33, 430).
 
-% h facts for pairs (29, Y)
+% Straight line distance (29, Y)
 h(29, 30, 230).
 h(29, 31, 483).
 h(29, 32, 523).
 h(29, 33, 431).
 
-% h facts for pairs (30, Y)
+% Straight line distance (30, Y)
 h(30, 31, 255).
 h(30, 32, 396).
 h(30, 33, 255).
 
-% h facts for pairs (31, Y)
+% Straight line distance (31, Y)
 h(31, 32, 418).
 h(31, 33, 262).
 
-% h facts for pairs (32, Y)
+% Straight line distance (32, Y)
 h(32, 33, 162).
