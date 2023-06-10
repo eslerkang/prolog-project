@@ -67,7 +67,7 @@ insert_sort_queue(State, [H|T], [H | T_new]) :-
 
 dequeue_pq(First, [First|Rest], Rest).
 
-test :- go('LA', 'DET'), !.
+test :- go('Lisbon', 'Reims'), !.
 
 go(StartName, GoalName) :-
 	empty_set(Closed_set),
@@ -75,7 +75,7 @@ go(StartName, GoalName) :-
 	charger(Start, StartName),
 	charger(Goal, GoalName),
 	heuristic(Start, Goal, H),
-	insert_pq([Start, nil, 240, 0, H, H], Open, Open_pq),
+	insert_pq([Start, nil, 837, 0, H, H], Open, Open_pq),
 	path(Open_pq, Closed_set, Goal).
 
 path(Open_pq, _, _) :-
@@ -138,20 +138,20 @@ printsolution([State, Parent, L, G, _, _], Closed_set) :-
 
 move(State, Next, NP, L, NL) :-
 	road(State, Next, P),
-	L \= 240,
-	Charge is 240 - L,
+	L \= 837,
+	Charge is 837 - L,
 	charge(State, C),
 	NP is P + Charge / C * 80,
-	NL is 240 - P,
+	NL is 837 - P,
 	NL >= 0.
 
 move(State, Next, NP, L, NL) :-
 	road(Next, State, P),
-	L \= 240,
-	Charge is 240 - L,
+	L \= 837,
+	Charge is 837 - L,
 	charge(State, C),
 	NP is P + Charge / C * 80,
-	NL is 240 - P,
+	NL is 837 - P,
 	NL >= 0.
 
 move(State, Next, P, L, NL) :-
