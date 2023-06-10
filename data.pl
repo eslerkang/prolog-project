@@ -5,7 +5,7 @@ charger(4, 'Zaragoza').
 charger(5, 'Barcelona').
 charger(6, 'Bayonne').
 charger(7, 'Cenon').
-charger(8, 'Marseille').
+charger(8, 'Marseiller').
 charger(9, 'Montpellier').
 charger(10, 'Lyon').
 charger(11, 'Turin').
@@ -72,38 +72,38 @@ road(3, 4, 320).
 road(4, 5, 311).
 road(3, 6, 511).
 road(6, 7, 193).
-road(7, 8, 544).
+road(7, 10, 544).
 road(5, 9, 344).
-road(9, 8, 304).
-road(5, 10, 505).
-road(10, 11, 374).
+road(5, 8, 505).
+road(8, 11, 374).
 road(11, 12, 141).
-road(12, 8, 447).
-road(8, 13, 466).
-road(13, 14, 473).
-road(13, 17, 144).
-road(17, 18, 432).
-road(14, 15, 380).
-road(15, 16, 398).
-road(14, 18, 380).
-road(18, 19, 159).
-road(15, 18, 55).
-road(16, 19, 441).
-road(16, 20, 546).
+road(12, 10, 447).
+road(10, 13, 466).
+road(13, 15, 473).
+road(13, 17, 312).
+road(13, 14, 144).
+road(14, 18, 432).
+road(15, 17, 380).
+road(17, 18, 398).
+road(15, 16, 380).
+road(16, 19, 159).
+road(17, 16, 55).
+road(18, 19, 441).
+road(18, 20, 546).
 road(20, 21, 350).
 road(20, 22, 347).
-road(22, 23, 355).
+road(22, 26, 355).
 road(21, 22, 286).
-road(21, 24, 207).
-road(21, 25, 333).
-road(25, 26, 80).
-road(25, 27, 262).
-road(26, 27, 200).
-road(26, 24, 125).
-road(24, 23, 540).
-road(20, 28, 438).
-road(28, 29, 42).
-road(29, 33, 502).
+road(21, 27, 207).
+road(21, 23, 333).
+road(23, 24, 80).
+road(23, 25, 262).
+road(24, 25, 200).
+road(24, 27, 125).
+road(27, 26, 540).
+road(20, 29, 438).
+road(29, 28, 42).
+road(28, 33, 502).
 road(33, 32, 198).
 road(29, 30, 315).
 road(30, 33, 280).
