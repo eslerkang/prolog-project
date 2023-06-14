@@ -126,13 +126,13 @@ heuristic(State, Goal, HT) :-
 printsolution([State, nil, L, _, _, _], _) :-
 	charger(State, Name),
 	write('<< Start at '), write(Name), write(' >>'), nl,
-	write('With remaining driving range: '), print(L), write('km'), nl, nl.
+	write('With remaining battery level: '), print(L), write('kWh / full'), nl, nl.
 printsolution([State, Parent, L, G, _, _], Closed_set) :-
 	member_set([Parent, Grandparent, PL, PG, _, _], Closed_set),
 	printsolution([Parent, Grandparent, PL, PG, _, _], Closed_set),
 	charger(State, Name),
 	write('<< Go to '), write(Name), write(' >>'), nl,
-	write('With remaining driving range: '), write(L), write('km'), nl,
+	write('With remaining battery level: '), write(L), write('kWh'), nl,
 	convert_time(G, Hour, Min),
 	write('Time passed: '), write(Hour), write('h '), write(Min), write('m'), nl, nl.
 
