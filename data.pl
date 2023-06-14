@@ -5,7 +5,7 @@ charger(4, 'Zaragoza').
 charger(5, 'Barcelona').
 charger(6, 'Bayonne').
 charger(7, 'Cenon').
-charger(8, 'Marseiller').
+charger(8, 'Marseille').
 charger(9, 'Montpellier').
 charger(10, 'Lyon').
 charger(11, 'Turin').
